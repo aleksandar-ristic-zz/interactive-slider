@@ -51,6 +51,7 @@ p {
 }
 
 .attribution {
+  margin: 3rem;
   font-size: 0.625rem;
 }
 
@@ -101,6 +102,8 @@ p {
   padding: 2rem 3rem;
   border-radius: 0.625rem;
   background-color: white;
+  -webkit-box-shadow: 0px 10px 5px 10px rgba(189, 204, 255, 0.1);
+          box-shadow: 0px 10px 5px 10px rgba(189, 204, 255, 0.1);
   overflow: hidden;
 }
 
@@ -148,7 +151,7 @@ p {
   width: 100%;
 }
 
-.action-container .input-container #range {
+.action-container .input-container .range {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -159,7 +162,7 @@ p {
   outline: none;
 }
 
-.action-container .input-container #range::-webkit-slider-thumb {
+.action-container .input-container .range::-webkit-slider-thumb {
   position: relative;
   -webkit-appearance: none;
   appearance: none;
@@ -175,12 +178,19 @@ p {
   z-index: 5;
 }
 
-.action-container .input-container #range::-webkit-slider-thumb:hover {
-  -webkit-box-shadow: 0 8px 20px #10d5c2;
-          box-shadow: 0 8px 20px #10d5c2;
+.action-container .input-container .range::-webkit-slider-thumb:hover {
+  background-color: #38f0db;
+  -webkit-box-shadow: 0 10px 35px #10d5c2;
+          box-shadow: 0 10px 35px #10d5c2;
 }
 
-.action-container .input-container #range::-moz-range-thumb {
+.action-container .input-container .range::-webkit-slider-thumb:active {
+  background-color: #10d5c2;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.action-container .input-container .range::-moz-range-thumb {
   position: relative;
   -moz-appearance: none;
        appearance: none;
@@ -192,6 +202,15 @@ p {
   z-index: 5;
 }
 
+.action-container .input-container .range::-moz-range-thumb:hover {
+  box-shadow: 0 8px 30px #10d5c2;
+}
+
+.action-container .input-container .range::-moz-range-thumb:active {
+  background-color: #10d5c2;
+  cursor: grabbing;
+}
+
 .action-container .input-container .active-slide {
   position: absolute;
   width: 53%;
@@ -199,11 +218,15 @@ p {
   top: 60%;
   left: 0;
   border-radius: 0.5rem;
-  background-color: #10d5c2;
+  background-color: #a2f1e8;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   -webkit-transition: 0.3s background-color ease;
   transition: 0.3s background-color ease;
+}
+
+.action-container .input-container.hidden {
+  display: none;
 }
 
 .action-container .action-toggle {
@@ -324,4 +347,13 @@ p {
 
 .action-container .action-options ul li:last-of-type {
   padding-bottom: 0;
+}
+
+.action-container .action-options button {
+  padding: 1rem 3rem;
+  color: white;
+  font-size: #cdd7ee;
+  border: none;
+  border-radius: 3rem;
+  background-color: #293356;
 }
