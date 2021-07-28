@@ -20,6 +20,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  color: #858fad;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -39,9 +40,14 @@ body::before {
   left: 0;
   width: 100%;
   height: 50vh;
-  border-bottom-left-radius: 3rem;
+  border-bottom-left-radius: 9rem;
   background-color: #eaeefb;
   z-index: -1;
+}
+
+p {
+  font-size: 0.9375rem;
+  color: #858fad;
 }
 
 .attribution {
@@ -53,5 +59,269 @@ body::before {
 }
 
 .headline-container {
+  text-align: center;
+}
+
+.headline-container h2 {
   position: relative;
+  color: #293356;
+  font-size: 1.7625rem;
+  font-weight: 800;
+  margin-bottom: 0.625rem;
+}
+
+.headline-container h2::before, .headline-container h2::after {
+  content: '';
+  position: absolute;
+  border: 1px solid #cdd7ee;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.headline-container h2::before {
+  width: 125px;
+  height: 125px;
+  top: -50%;
+  left: 31.5%;
+}
+
+.headline-container h2::after {
+  width: 80px;
+  height: 80px;
+  top: -90%;
+  left: 48%;
+}
+
+.headline-container p {
+  margin-bottom: 5.25rem;
+}
+
+.action-container {
+  width: 33.75rem;
+  padding: 2rem 3rem;
+  border-radius: 0.625rem;
+  background-color: white;
+  overflow: hidden;
+}
+
+.action-container .action-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.5rem 0 2rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.action-container .action-data .pageviews {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.action-container .action-data .amount {
+  color: #293356;
+  font-size: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.action-container .action-data .amount .time {
+  display: inline-block;
+  margin-left: 0.625rem;
+  color: #858fad;
+  font-size: 0.8125rem;
+  font-weight: 400;
+}
+
+.action-container .input-container {
+  position: relative;
+  width: 100%;
+}
+
+.action-container .input-container #range {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100%;
+  height: 0.5rem;
+  background-color: #cdd7ee;
+  border-radius: 0.5rem;
+  outline: none;
+}
+
+.action-container .input-container #range::-webkit-slider-thumb {
+  position: relative;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #10d5c2 url("/images/icon-slider.svg") no-repeat center;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: -webkit-box-shadow 0.3s ease;
+  transition: -webkit-box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+  z-index: 5;
+}
+
+.action-container .input-container #range::-webkit-slider-thumb:hover {
+  -webkit-box-shadow: 0 8px 20px #10d5c2;
+          box-shadow: 0 8px 20px #10d5c2;
+}
+
+.action-container .input-container #range::-moz-range-thumb {
+  position: relative;
+  -moz-appearance: none;
+       appearance: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #10d5c2 url("/images/icon-slider.svg") no-repeat center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.action-container .input-container .active-slide {
+  position: absolute;
+  width: 53%;
+  height: 0.5rem;
+  top: 60%;
+  left: 0;
+  border-radius: 0.5rem;
+  background-color: #10d5c2;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: 0.3s background-color ease;
+  transition: 0.3s background-color ease;
+}
+
+.action-container .action-toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 3rem 1.125rem;
+}
+
+.action-container .action-toggle .radio-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.action-container .action-toggle .radio-group span {
+  color: #858fad;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.action-container .action-toggle .radio-group .radio-container {
+  position: relative;
+  width: 2.625rem;
+  height: 1.375rem;
+  margin: 0 1.125rem;
+}
+
+.action-container .action-toggle .radio-group .radio-container #radio {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  background-color: #bdccff;
+  -webkit-transition: 0.5s background-color ease;
+  transition: 0.5s background-color ease;
+}
+
+.action-container .action-toggle .radio-group .radio-container #radio:checked {
+  background-color: #10d5c2;
+}
+
+.action-container .action-toggle .radio-group .radio-container::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.5rem;
+  background-color: white;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: all 0.5s 0.2s ease-in-out;
+  transition: all 0.5s 0.2s ease-in-out;
+}
+
+.action-container .action-toggle .radio-group .radio-container.active::before {
+  left: 1.375rem;
+}
+
+.action-container .action-toggle span.discount {
+  margin-left: 0.5rem;
+  padding: 0.375rem;
+  font-size: 0.625rem;
+  line-height: 0.9;
+  font-weight: 800;
+  color: #ff8c66;
+  border-radius: 1rem;
+  background-color: #feece7;
+}
+
+.action-container hr {
+  position: relative;
+  left: -3rem;
+  width: 33.75rem;
+  border: 0;
+  border-top: 1px solid #cdd7ee;
+}
+
+.action-container .action-options {
+  padding-top: 2.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.action-container .action-options ul {
+  list-style-type: none;
+}
+
+.action-container .action-options ul li {
+  padding-left: 1.35rem;
+  padding-bottom: 0.5rem;
+  position: relative;
+  font-size: 0.8125rem;
+}
+
+.action-container .action-options ul li::before {
+  content: url("/images/icon-check.svg");
+  position: absolute;
+  left: 0;
+}
+
+.action-container .action-options ul li:last-of-type {
+  padding-bottom: 0;
 }

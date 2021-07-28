@@ -15,6 +15,7 @@ body {
 	min-height: 100vh;
 	background-color: $veryPaleBlue;
 	display: flex;
+	color: $grayishBlue;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
@@ -26,9 +27,13 @@ body::before {
 	left: 0;
 	width: 100%;
 	height: 50vh;
-	border-bottom-left-radius: 3rem;
+	border-bottom-left-radius: 9rem;
 	background-color: $lightGrayishBlueE;
 	z-index: -1;
+}
+p {
+	font-size: $fontP;
+	color: $grayishBlue;
 }
 .attribution {
 	font-size: $fontXs;
