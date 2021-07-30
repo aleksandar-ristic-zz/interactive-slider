@@ -15,37 +15,44 @@
 	<body>
 		<div class="headline-container">
 			<h2>Simple, traffic-based pricing</h2>
-			<p>Sign-up for our 30-day trial. No credit card required.</p>
+			<p>
+				Sign-up for our 30-day trial.
+				<span> No credit card required. </span>
+			</p>
 		</div>
 
 		<div class="action-container">
 			<div class="action-data">
 				<p class="pageviews">Pageviews</p>
-				<h3 class="amount">$ 16.00 <span class="time">/ month</span></h3>
-			</div>
-
-			<div class="input-container">
-				<input
-					class="range"
-					type="range"
-					name="range"
-					id="range"
-					min="0"
-					max="30"
-					default="16"
-				/>
-				<div class="active-slide"></div>
+				<div class="amount-container">
+					<h3 class="amount">$ 16.00</h3>
+					<span class="time">/ month</span>
+				</div>
+				<div class="input-container">
+					<input
+						class="range"
+						type="range"
+						name="range"
+						id="range"
+						min="0"
+						max="30"
+						default="16"
+					/>
+					<div class="active-slide"></div>
+				</div>
 			</div>
 
 			<div class="action-toggle">
 				<div class="radio-group">
 					<span>Monthly Billing</span>
 					<div class="radio-container">
-						<input type="radio" name="radio" id="radio" />
+						<input type="checkbox" name="check" id="check" />
 					</div>
-					<span>Yearly Billing</span>
+					<span
+						>Yearly Billing <span class="discount discount-sm">-25%</span></span
+					>
 				</div>
-				<span class="discount">25% <span>discount</span></span>
+				<span class="discount discount-xl">25% discount</span>
 			</div>
 
 			<hr />

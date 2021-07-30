@@ -1,5 +1,58 @@
 @media (max-width: 600px) {
+	.headline-container {
+		margin-top: 5.625rem;
+		h2 {
+			font-size: 1.25rem;
+
+			&:before {
+				top: -40%;
+				left: 23.5%;
+			}
+		}
+		p {
+			display: flex;
+			font-weight: 400;
+			flex-direction: column;
+		}
+	}
+
 	.action-container {
 		max-width: calc(100% - 3rem);
+		padding: 2rem 1.5rem;
+
+		.action-data {
+			justify-content: center;
+			.pageviews {
+				margin-bottom: 1.5rem;
+			}
+			.amount {
+				order: 3;
+				margin-top: 1.5rem;
+				font-size: 2rem;
+			}
+		}
+		.action-toggle {
+			margin-bottom: 2.35rem;
+			justify-content: center;
+			padding: 0;
+
+			.discount-xl {
+				display: none;
+			}
+			.discount-sm {
+				display: inline-block;
+				position: absolute;
+				right: -0.5rem;
+			}
+		}
+		.action-options {
+			flex-direction: column;
+			ul {
+				margin-bottom: 2.25rem;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+		}
 	}
 }
