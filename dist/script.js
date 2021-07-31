@@ -3,7 +3,6 @@ const inputRange = document.querySelector('#range')
 const inputCheck = document.querySelector('#check')
 
 // Event Listeners
-window.onload = showViews()
 inputRange.oninput = () => {
 	return calculate(inputRange.value, inputCheck.checked)
 }
@@ -38,7 +37,10 @@ function show(rangeNo, fillValue) {
 
 	inputFillValue.style.width = fillValue
 }
-function showViews() {
-	const pageviews = document.querySelector('.pageviews')
-	console.log('for now')
+function showViews(res) {
+	let value = res.value
+	if (value >= 1000) {
+		value.splice(value.length - 4, 'k')
+	}
+	document.querySelector('.pageviews').innerText = `${res.value} pageviews`
 }

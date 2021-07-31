@@ -56,15 +56,16 @@
 			margin-bottom: 2rem;
 		}
 
-		.amount {
-			color: $darkSaturatedBlue;
-			font-size: $fontXl;
+		.amount-container {
 			display: flex;
 			align-items: center;
 			padding-bottom: 2rem;
 
+			.amount {
+				color: $darkSaturatedBlue;
+				font-size: $fontXl;
+			}
 			.time {
-				display: inline-block;
 				margin-left: $fontXs;
 				color: $grayishBlue;
 				font-size: $fontSm;
