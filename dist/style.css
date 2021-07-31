@@ -59,7 +59,13 @@ p {
   color: steelblue;
 }
 
+.viewed-times {
+  font-weight: 600;
+  color: steelblue;
+}
+
 .headline-container {
+  margin-top: 2rem;
   text-align: center;
 }
 

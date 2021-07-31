@@ -12,35 +12,36 @@ inputCheck.onchange = () => {
 
 // Functions
 function calculate(range, check) {
-	const MAX_INPUT_RANGE = 30
+	values = getValues(range)
+	const MAX_INPUT_RANGE = 4
 	const PERCENT = MAX_INPUT_RANGE / 100
 	const fillValue = `${range / PERCENT}%`
 
 	if (check) {
 		const DISCOUNT = 0.75
-		show(range * DISCOUNT, fillValue)
+		show(values.range * DISCOUNT, fillValue, values.views)
 	} else {
-		show(range, fillValue)
+		show(values.range, fillValue, values.views)
 	}
 }
-function show(rangeNo, fillValue) {
-	console.log(rangeNo)
+function show(rangeNo, fillValue, viewsNo) {
 	const inputValue = document.querySelector('.amount')
 	const inputFillValue = document.querySelector('.active-slide')
+	const pageviews = document.querySelector('.pageviews')
 
-	inputValue.innerHTML = ''
+	inputValue.innerText = `$ ${parseFloat(rangeNo).toFixed(2)}`
 
-	const inputText = document.createTextNode(
-		`$ ${parseFloat(rangeNo).toFixed(2)}`
-	)
-	inputValue.append(inputText)
-
+	pageviews.innerText = `${viewsNo} pageviews`
 	inputFillValue.style.width = fillValue
 }
+function getValues(i) {
+	const range = [8, 12, 16, 24, 36]
+	const views = ['10k', '50k', '100k', '500k', '1M']
+
+	return { range: range[i], views: views[i] }
+}
+
+//* CountAPI
 function showViews(res) {
-	let value = res.value
-	if (value >= 1000) {
-		value.splice(value.length - 4, 'k')
-	}
-	document.querySelector('.pageviews').innerText = `${res.value} pageviews`
+	document.querySelector('.viewed-times').innerText = res.value
 }
